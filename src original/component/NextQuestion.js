@@ -1,8 +1,6 @@
 import React from "react";
-import { useQuiz } from "../contexts/QuizContext";
 
-function NextQuestion() {
-  const { dispatch, answer, index, numQuestions } = useQuiz();
+function NextQuestion({ dispatch, answer, index, numQuestions }) {
   if (answer === null) return null;
   //checking if the index is less than the number of questions
   if (index < numQuestions - 1)
